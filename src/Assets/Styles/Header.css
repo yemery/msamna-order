@@ -13,5 +13,12 @@ ul li:hover {
 }
 .listOfCat {
   display: flex;
-  margin: 53px;
+  margin: 46px;
+}
+.card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

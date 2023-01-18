@@ -5,7 +5,7 @@ const initialState = {
   filterItemsArr: [],
   categories: filterByElm,
 };
-export const counterSlice = createSlice({
+export const itemsSlice = createSlice({
   name: "counter",
   initialState,
   reducers: {
@@ -28,6 +28,6 @@ export const counterSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { filterItems } = counterSlice.actions;
+export const { filterItems } = itemsSlice.actions;
 
-export default counterSlice.reducer;
+export default itemsSlice.reducer;

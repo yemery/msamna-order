@@ -1,11 +1,14 @@
-import NavBar from "./Layouts/NavBar/NavBar";
 import "./App.css";
-import Header from "./Components/ManuPage/Header";
+
+import AllRoutes from "./Routes/AllRoutes";
+import { BrowserRouter as Router } from "react-router-dom";
+
 function App() {
   return (
     <>
-      <NavBar />
-      <Header />
+      <Router>
+        <AllRoutes />
+      </Router>
     </>
   );
 }

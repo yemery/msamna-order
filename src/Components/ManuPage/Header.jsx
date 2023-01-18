@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { filterItems } from "../../Services/Reducers/Items";
 import { useSelector, useDispatch } from "react-redux";
 import "../../Assets/Styles/Header.css";
+import Item from "./Item";
 const Header = () => {
   const dispatch = useDispatch();
   const allItems = useSelector((data) => data.Items);
@@ -21,13 +22,20 @@ const Header = () => {
           return (
             <>
               <ul key={e.id}>
-                <li onClick={() => filterFun(e.name)}>{e.name}</li>
+                <li onClick={() => filterFun(e.name)} className="catLink">
+                  {e.name}{" "}
+                </li>
               </ul>
             </>
           );
         })}{" "}
       </div>
-      {ArrToMapOn.map((e) => e.category)}
+
+      <div className="container card">
+        {ArrToMapOn.map((e) => (
+          <Item {...e} />
+        ))}
+      </div>
     </>
   );
 };

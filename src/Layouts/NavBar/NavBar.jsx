@@ -12,10 +12,10 @@ const NavBar = () => {
           </a>
         </div>
         <div className="container-fluid shoppingCart">
-          <a href="/">
+          <Link to="/order">
             <BsFillCartFill size={20} />
             <span>(0)</span>
-          </a>
+          </Link>
         </div>
       </nav>
     </>

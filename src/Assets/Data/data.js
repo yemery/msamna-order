@@ -162,7 +162,7 @@ const items = [
   {
     id: 10,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -178,7 +178,7 @@ const items = [
   {
     id: 11,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -194,7 +194,7 @@ const items = [
   {
     id: 12,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -210,7 +210,7 @@ const items = [
   {
     id: 13,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -226,7 +226,7 @@ const items = [
   {
     id: 14,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -242,7 +242,7 @@ const items = [
   {
     id: 15,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -258,7 +258,7 @@ const items = [
   {
     id: 16,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -274,7 +274,7 @@ const items = [
   {
     id: 17,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -290,7 +290,7 @@ const items = [
   {
     id: 18,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -306,7 +306,7 @@ const items = [
   {
     id: 19,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -322,7 +322,7 @@ const items = [
   {
     id: 20,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
@@ -338,7 +338,7 @@ const items = [
   {
     id: 21,
     name: "Lorem ipsum dolor sit amet. Rem eaque laboriosam et eligendi dolor ab quia illo. Cum quas dolor qui dicta dolorem ut aperiam",
-    price: 4,
+    price: 1,
     ingredient: [
       "At quam ipsum est autem enim quo numquam repellendus?",
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",

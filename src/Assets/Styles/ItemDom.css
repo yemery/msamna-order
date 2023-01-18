@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&family=Harmattan&display=swap");
+.title {
+  line-height: 1;
+  font-family: "Galada", cursive;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Gurajada", serif;
+  font-size: 33px;
+}
+/* .itemDesc {
+  width: 700px;
+} */
+.itemContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 99px;
+}
+.itemImg div {
+  width: 510px;
+  height: 448px;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+span {
+  font-family: "Gurajada", serif;
+  font-size: 26px;
+}
+.itemDesc {
+  margin-left: 81px;
+}
+.price {
+  font-size: 30px;
+  color: #2c0808;
+  font-family: "Gurajada", serif;
+}
+
+.ing {
+  padding-left: 30px;
+  padding-top: -3px;
+  line-height: 2;
+  font-family: "Galada", cursive;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Gurajada", serif;
+  font-family: "Harmattan", sans-serif;
+}

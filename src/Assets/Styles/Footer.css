@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&display=swap");
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin: 25px; */
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: inset 0px 2px 0px rgb(0 0 0 / 8%);
+  height: 93px;
+  line-height: 1.3;
+}
+.footer p {
+  font-size: 22px;
+  font-family: "Galada", cursive;
+}
+.footer span {
+  font-family: "Galada", cursive;
+  font-size: 14px;
+}
