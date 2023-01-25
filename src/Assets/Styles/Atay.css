@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&family=Harmattan&display=swap");
+.atayContainer {
+  margin: 99px;
+}
+.atayContainer p {
+  font-family: "Gurajada", serif;
+  font-size: 26px;
+}
+
+input[type="checkbox"] {
+  /* Resize the checkbox using the width and height properties */
+  width: 30px;
+  height: 30px;
+  /* Add any other styling here */
+  content: "";
+}
+.supps {
+  display: flex;
+  /* column-gap: 216px; */
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.supps div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+.supps div span {
+  font-family: "Galada", cursive;
+  font-family: "Gamja Flower", cursive;
+  font-family: "Gurajada", serif;
+  font-family: "Harmattan", sans-serif;
+  font-size: 23px;
+}
+button {
+  all: unset;
+  cursor: pointer;
+}
+.orderSetup {
+  display: flex;
+  justify-content: end;
+  /* margin-right: 30px; */
+  margin-top: 81px;
+}
+.qts {
+  display: flex;
+  justify-content: space-between;
+  width: 210px;
+  margin-right: 40px;
+}
+.orderSetup input[type="submit"] {
+  width: 200px;
+}

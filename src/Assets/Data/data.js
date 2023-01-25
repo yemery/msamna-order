@@ -722,6 +722,7 @@ const suppliments = [
   { id: 3, name: "lunsheon", price: 1 },
   { id: 4, name: "bourgeois charcuterie", price: 1 },
   { id: 5, name: "choclate", price: 1 },
+  { id: 6, name: "amlou", price: 1 },
 ];
 
 const filterByElm = [
@@ -736,6 +737,10 @@ const ataySuppliments = [
   { id: 1, name: "chiba" },
   { id: 2, name: "sugar" },
   { id: 3, name: "no sugar" },
+  { id: 4, name: "marsita" },
+  { id: 5, name: "za3tar" },
+  { id: 6, name: "flio" },
+  { id: 7, name: "dry" },
 ];
 
 export { ataySuppliments, items, suppliments, filterByElm };

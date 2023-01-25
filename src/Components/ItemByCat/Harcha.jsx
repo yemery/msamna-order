@@ -6,9 +6,9 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
     <>
       <ItemDom {...{ id, name, image, price, ingredient }} />
       {/* {id} */}
-      {suppliments.map((e) => {
+      {/* {suppliments.map((e) => {
         return <>{e.name}</>;
-      })}
+      })} */}
     </>
   );
 };
