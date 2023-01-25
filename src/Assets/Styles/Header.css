@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&display=swap");
-ul li {
+ul li,
+li span {
   list-style-type: none;
   list-style: none;
   font-family: "Galada", cursive;
@@ -10,6 +11,10 @@ ul li {
 ul li:hover {
   cursor: pointer;
   text-shadow: 0 0 3px #d9d9d9;
+  text-decoration: underline;
+}
+ul li:active {
+  color: red;
 }
 .listOfCat {
   display: flex;

@@ -23,7 +23,7 @@ const Header = () => {
             <>
               <ul key={e.id}>
                 <li onClick={() => filterFun(e.name)} className="catLink">
-                  {e.name}{" "}
+                  <span>{e.name}</span>{" "}
                 </li>
               </ul>
             </>
@@ -31,6 +31,11 @@ const Header = () => {
         })}{" "}
       </div>
 
+      {/* <div className="container card">
+        {ArrToMapOn.map((e) => (
+          <Item {...e} />
+        ))}
+      </div> */}
       <div className="container card">
         {ArrToMapOn.map((e) => (
           <Item {...e} />

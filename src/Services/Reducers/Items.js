@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { items, filterByElm } from "../../Assets/Data/data";
 const initialState = {
-  items: items,
+  items: items.sort(() => Math.random() - 0.5),
   filterItemsArr: [],
   categories: filterByElm,
 };

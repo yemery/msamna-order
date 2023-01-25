@@ -14,6 +14,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 1,
@@ -30,6 +31,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 2,
@@ -46,6 +48,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 3,
@@ -62,6 +65,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 4,
@@ -78,6 +82,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 5,
@@ -94,6 +99,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 6,
@@ -110,6 +116,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 7,
@@ -126,6 +133,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 8,
@@ -142,6 +150,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 9,
@@ -158,6 +167,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 10,
@@ -174,6 +184,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 11,
@@ -190,6 +201,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 12,
@@ -206,6 +218,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 13,
@@ -222,6 +235,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 14,
@@ -238,6 +252,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 15,
@@ -254,6 +269,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 16,
@@ -270,6 +286,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 17,
@@ -286,6 +303,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 18,
@@ -302,6 +320,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 19,
@@ -318,6 +337,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 20,
@@ -334,6 +354,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 21,
@@ -350,6 +371,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "7archa",
+    image: "Images/harcha.jpg",
   },
   {
     id: 22,
@@ -366,6 +388,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 23,
@@ -382,6 +405,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 24,
@@ -398,6 +422,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 25,
@@ -414,6 +439,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 26,
@@ -430,6 +456,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 27,
@@ -446,6 +473,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 28,
@@ -462,6 +490,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 29,
@@ -478,6 +507,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 30,
@@ -494,6 +524,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "atay",
+    image: "Images/atay.jpg",
   },
   {
     id: 31,
@@ -510,6 +541,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 32,
@@ -526,6 +558,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 33,
@@ -542,6 +575,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 34,
@@ -558,6 +592,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 35,
@@ -574,6 +609,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 36,
@@ -590,6 +626,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 37,
@@ -606,6 +643,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 38,
@@ -622,6 +660,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 38,
@@ -638,6 +677,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 39,
@@ -654,6 +694,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
   {
     id: 40,
@@ -670,6 +711,7 @@ const items = [
       "Et numquam doloribus sed illum molestiae aut sequi harum et quidem rerum.",
     ],
     category: "msemen",
+    image: "Images/msemen.png",
   },
 ];
 

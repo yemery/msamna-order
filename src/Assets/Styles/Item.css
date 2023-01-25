@@ -12,11 +12,16 @@
   background-color: black;
   /* border-radius: 10px; */
   /* border-right: 40px; */
-  border: 1px solid black;
+  border-bottom: 1px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.img img {
+  /* border: 1px solid black; */
 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .desc {
   height: 27%;
   display: flex;
