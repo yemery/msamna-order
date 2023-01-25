@@ -1,9 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { items, filterByElm } from "../../Assets/Data/data";
+import {
+  items,
+  filterByElm,
+  suppliments,
+  ataySuppliments,
+} from "../../Assets/Data/data";
 const initialState = {
   items: items.sort(() => Math.random() - 0.5),
   filterItemsArr: [],
   categories: filterByElm,
+  ataySupp: ataySuppliments,
+  otherSupp: suppliments,
 };
 export const itemsSlice = createSlice({
   name: "counter",

@@ -731,11 +731,11 @@ const filterByElm = [
   { id: 3, name: "atay" },
 ];
 
-const ataySuppliment = [
+const ataySuppliments = [
   { id: 0, name: "na3na3" },
   { id: 1, name: "chiba" },
   { id: 2, name: "sugar" },
   { id: 3, name: "no sugar" },
 ];
 
-export { ataySuppliment, items, suppliments, filterByElm };
+export { ataySuppliments, items, suppliments, filterByElm };

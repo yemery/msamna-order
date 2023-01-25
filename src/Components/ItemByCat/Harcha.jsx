@@ -4,7 +4,11 @@ import ItemDom from "../ItemDetails/ItemDom";
 const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
   return (
     <>
-      <ItemDom {...{ id, name, image, price }} />
+      <ItemDom {...{ id, name, image, price, ingredient }} />
+      {/* {id} */}
+      {suppliments.map((e) => {
+        return <>{e.name}</>;
+      })}
     </>
   );
 };

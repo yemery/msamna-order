@@ -13,17 +13,32 @@ const ItemDetails = () => {
   const findItemById = useSelector((state) => state.Items.items).find(
     (e) => e.id == id
   );
+  const items = useSelector((state) => state.Items);
+  // console.log(items);
+  const otherSuppliments = items.otherSupp;
+  const ataySuppliments = items.ataySupp;
+  // console.log(otherSuppliments, ataySuppliments);
+  const propsItemsDetailsOtherSupp = {
+    ...findItemById,
+    suppliments: otherSuppliments,
+  };
+  const propsItmesDetailsAtaySupp = {
+    ...findItemById,
+    suppliments: ataySuppliments,
+  };
+  // console.log(propsItemsDetailsOtherSupp);
+
   return (
     <>
       <NavBar />
       {/* <ItemDom {...findItemById} /> */}
       {(() => {
         if (findItemById.category == "atay") {
-          return <Atay {...findItemById} />;
+          return <Atay {...propsItmesDetailsAtaySupp} />;
         } else if (findItemById.category == "msemen") {
-          return <Msamen {...findItemById} />;
+          return <Msamen {...propsItemsDetailsOtherSupp} />;
         } else if (findItemById.category == "7archa") {
-          return <Harcha {...findItemById} />;
+          return <Harcha {...propsItemsDetailsOtherSupp} />;
         }
       })()}
       {/* <Footer /> */}
