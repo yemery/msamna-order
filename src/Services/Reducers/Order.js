@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
-  order: [],
+  cartOrders: [],
+  orders: [],
 };
 
 export const OrderSlice = createSlice({
@@ -14,6 +15,6 @@ export const OrderSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const {} = OrderSlice.actions;
+export const { addOrder, editOrder, deleteOrder } = OrderSlice.actions;
 
 export default OrderSlice.reducer;

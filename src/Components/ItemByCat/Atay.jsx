@@ -1,8 +1,15 @@
-import React from "react";
-import ItemDom from "../ItemDetails/ItemDom";
+import React, { useState } from "react";
 import "../../Assets/Styles/Atay.css";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
 const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
+  const [atayOrder, setAtayOrder] = useState([]);
+  console.log(suppliments.length);
+  let objForCounter = {};
+  suppliments.map((e, i) => {
+    let cn = `counter${i}`;
+    objForCounter = { ...objForCounter, cn: 0 };
+  });
+  console.log(objForCounter);
   return (
     <>
       <div className="atayContainer">
