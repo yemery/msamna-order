@@ -16,12 +16,16 @@ input[type="checkbox"] {
   content: "";
 }
 .supps {
-  display: flex;
-  /* column-gap: 216px; */
-  justify-content: space-between;
-  width: 100%;
-  margin-top: 20px;
-  flex-wrap: wrap;
+ display: flex;
+    /* column-gap: 216px; */
+    /* justify-content: space-between; */
+    /* width: 100%; */
+    margin-top: 20px;
+    /* flex-wrap: wrap-reverse; */
+    align-items: center;
+    flex-wrap: wrap;
+    /* width: 200px; */
+    row-gap: 16px;
 }
 .supps div {
   display: flex;

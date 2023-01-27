@@ -6,9 +6,7 @@ import NavBar from "../Layouts/NavBar/NavBar";
 const LandingPage = () => {
   return (
     <>
-      <NavBar />
       <Header />
-      <Footer />
     </>
   );
 };

@@ -30,18 +30,21 @@ const ItemDetails = () => {
 
   return (
     <>
-      <NavBar />
-      {/* <ItemDom {...findItemById} /> */}
+      <ItemDom {...findItemById} />
+
       {(() => {
         if (findItemById.category == "atay") {
           return <Atay {...propsItmesDetailsAtaySupp} />;
         } else if (findItemById.category == "msemen") {
-          return <Msamen {...propsItemsDetailsOtherSupp} />;
+          return (
+            <>
+              <Msamen {...propsItemsDetailsOtherSupp} />
+            </>
+          );
         } else if (findItemById.category == "7archa") {
           return <Harcha {...propsItemsDetailsOtherSupp} />;
         }
       })()}
-      {/* <Footer /> */}
     </>
   );
 };
