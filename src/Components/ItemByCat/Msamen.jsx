@@ -1,15 +1,8 @@
 import React from "react";
-import ItemDom from "../ItemDetails/ItemDom";
+import "../../Assets/Styles/Msemen.css";
+
 const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
-  return (
-    <>
-      {suppliments.map((e) => {
-        return <>{e.name}</>;
-      
-      })} 
-      {id}
-    </>
-  );
+  return <></>;
 };
 
 export default Msamen;

@@ -720,9 +720,9 @@ const suppliments = [
   { id: 1, name: "red cheese", price: 1 },
   { id: 2, name: "honey", price: 1 },
   { id: 3, name: "lunsheon", price: 1 },
-  { id: 4, name: "bourgeois charcuterie", price: 1 },
-  { id: 5, name: "choclate", price: 1 },
-  { id: 6, name: "amlou", price: 1 },
+  // { id: 4, name: "bourgeois charcuterie", price: 1 },
+  { id: 4, name: "choclate", price: 1 },
+  { id: 5, name: "amlou", price: 1 },
 ];
 
 const filterByElm = [

@@ -16,16 +16,19 @@ input[type="checkbox"] {
   content: "";
 }
 .supps {
- display: flex;
-    /* column-gap: 216px; */
-    /* justify-content: space-between; */
-    /* width: 100%; */
-    margin-top: 20px;
-    /* flex-wrap: wrap-reverse; */
-    align-items: center;
-    flex-wrap: wrap;
-    /* width: 200px; */
-    row-gap: 16px;
+  display: flex;
+  /* column-gap: 216px; */
+  justify-content: space-between;
+  /* width: 100%; */
+  /* column-gap: 21px; */
+  margin-top: 20px;
+  /* flex-wrap: wrap-reverse; */
+  align-items: center;
+  flex-wrap: wrap;
+  /* width: 200px; */
+  row-gap: 16px;
+  width: 100%;
+  /* height: 147px; */
 }
 .supps div {
   display: flex;

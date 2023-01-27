@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Galada&family=Gamja+Flower&family=Gurajada&family=Harmattan&display=swap");
+.harchaContainer {
+  margin: 99px;
+}
+.harchaContainer p {
+  font-family: "Gurajada", serif;
+  font-size: 26px;
+}
+.harchaContainer .harchaSupps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: end;
+  width: 100%;
+  height: auto;
+  column-gap: 40px;
+  row-gap: 20px;
+  margin-top: 16px;
+}
+.harchaContainer .harchaSupps .harchaDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 252px;
+  background: #ffffff;
+  /* box-shadow: 0px 1px 0px rgb(0 0 0 / 15%); */
+  /* height: 121px; */
+  height: -moz-fit-content;
+  /* height: fit-content; */
+}
+
+.harchaSupps .harchaDiv .counter {
+  display: flex;
+  justify-content: space-between;
+  width: 95px;
+}
