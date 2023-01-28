@@ -11,7 +11,7 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
     4: 0,
     5: 0,
   });
-  const [qtsCounter, setQts] = useState(0);
+  const [qtsOrder, setQts] = useState(0);
   console.log(counters);
   return (
     <>
@@ -62,13 +62,13 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
             <p>Order qts</p>
             <button
               onClick={() =>
-                qtsCounter === 0 ? setCounters(0) : setQts(qtsCounter - 1)
+                qtsOrder === 0 ? setCounters(0) : setQts(qtsOrder - 1)
               }
             >
               <FaMinusSquare size={32} />
             </button>
-            <span>{qtsCounter}</span>
-            <button onClick={() => setQts(qtsCounter + 1)}>
+            <span>{qtsOrder}</span>
+            <button onClick={() => setQts(qtsOrder + 1)}>
               <FaPlusSquare size={32} />
             </button>
           </div>

@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../Assets/Styles/Atay.css";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
 const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
-  const [atayOrder, setAtayOrder] = useState([]);
-  console.log(suppliments.length);
-  let objForCounter = {};
-  suppliments.map((e, i) => {
-    let cn = `counter${i}`;
-    objForCounter = { ...objForCounter, cn: 0 };
-  });
-  console.log(objForCounter);
+  const [orderQts, setOrderQtq] = useState(0);
+  const [checkedItems, setCheckedItems] = useState([]);
+  useEffect(() => {
+    console.log(checkedItems);
+  }, [checkedItems]);
   return (
     <>
       <div className="atayContainer">
@@ -24,6 +21,16 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
                     name={e.name}
                     id=""
                     className="checkboxInput"
+                    onClick={() =>
+                      checkedItems.includes(e.id)
+                        ? setCheckedItems(
+                            checkedItems.filter((el) => el != e.id)
+                          )
+                        : // ? setCheckedItems([
+                          //     ...checkedItems.filter((el) => el.id != e.id),
+                          //   ])
+                          setCheckedItems([...checkedItems, e.id])
+                    }
                   />
                   <span>{e.name}</span>
                 </div>
@@ -34,11 +41,15 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
         <div className="orderSetup">
           <div className="qts">
             <p>Order qts</p>
-            <button>
+            <button
+              onClick={() =>
+                orderQts === 0 ? setOrderQtq(0) : setOrderQtq(orderQts - 1)
+              }
+            >
               <FaMinusSquare size={32} />
             </button>
-            <span>0</span>
-            <button>
+            <span>{orderQts}</span>
+            <button onClick={() => setOrderQtq(orderQts + 1)}>
               <FaPlusSquare size={32} />
             </button>
           </div>
