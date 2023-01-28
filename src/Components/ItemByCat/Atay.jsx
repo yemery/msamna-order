@@ -1,12 +1,34 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "../../Assets/Styles/Atay.css";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addOrder } from "../../Services/Reducers/Order";
 const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
-  const [orderQts, setOrderQtq] = useState(0);
+  const [orderQts, setOrderQtq] = useState(1);
   const [checkedItems, setCheckedItems] = useState([]);
-  useEffect(() => {
-    console.log(checkedItems);
-  }, [checkedItems]);
+  const navigate = useNavigate();
+
+  // useEffect(() => {
+  //   console.log(checkedItems);
+  // }, [checkedItems]);
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const atayOrder = {
+      id: id,
+      name: name,
+      supps: checkedItems,
+      Qts: orderQts,
+    };
+    // console.log(atayOrder);
+    dispatch(addOrder(atayOrder));
+    setOrderQtq(0);
+    setCheckedItems([]);
+    navigate("/");
+  };
+
   return (
     <>
       <div className="atayContainer">
@@ -16,20 +38,21 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
             return (
               <>
                 <div>
+                  {/* <form action=""></form> */}
                   <input
                     type="checkbox"
                     name={e.name}
                     id=""
                     className="checkboxInput"
                     onClick={() =>
-                      checkedItems.includes(e.id)
+                      checkedItems.includes(e.name)
                         ? setCheckedItems(
-                            checkedItems.filter((el) => el != e.id)
+                            checkedItems.filter((el) => el != e.name)
                           )
                         : // ? setCheckedItems([
                           //     ...checkedItems.filter((el) => el.id != e.id),
                           //   ])
-                          setCheckedItems([...checkedItems, e.id])
+                          setCheckedItems([...checkedItems, e.name])
                     }
                   />
                   <span>{e.name}</span>
@@ -43,7 +66,7 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
             <p>Order qts</p>
             <button
               onClick={() =>
-                orderQts === 0 ? setOrderQtq(0) : setOrderQtq(orderQts - 1)
+                orderQts === 1 ? setOrderQtq(1) : setOrderQtq(orderQts - 1)
               }
             >
               <FaMinusSquare size={32} />
@@ -53,7 +76,13 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
               <FaPlusSquare size={32} />
             </button>
           </div>
-          <input type="submit" name="" id="" value="add to cart" />
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="add to cart"
+            onClick={handleSubmit}
+          />
         </div>
       </div>
     </>

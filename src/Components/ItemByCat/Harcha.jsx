@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
 import "../../Assets/Styles/Harcha.css";
+import { useDispatch, useSelector } from "react-redux";
+import { addOrder } from "../../Services/Reducers/Order";
+import { useNavigate } from "react-router-dom";
+
 const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
   const [counters, setCounters] = useState({
     0: 0,
@@ -10,8 +14,34 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
     4: 0,
     5: 0,
   });
-  const [itemQts, setItemQts] = useState(0);
-  const [qtsOrder, setQts] = useState(0);
+  const [itemQts, setItemQts] = useState(1);
+  const [qtsOrder, setQts] = useState(1);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const harchaOrder = {
+      id: id,
+      name: name,
+      supps: counters,
+      Qts: qtsOrder,
+      itemQts: itemQts,
+    };
+    console.log(harchaOrder);
+    dispatch(addOrder(harchaOrder));
+    setCounters({
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    });
+    setItemQts(1);
+    setItemQts(1);
+    navigate("/");
+  };
   return (
     <>
       <div className="harchaContainer">
@@ -60,7 +90,7 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
             <p>item qts</p>
             <button
               onClick={() =>
-                itemQts === 0 ? setItemQts(0) : setItemQts(itemQts - 1)
+                itemQts === 1 ? setItemQts(1) : setItemQts(itemQts - 1)
               }
             >
               <FaMinusSquare size={32} />
@@ -74,7 +104,7 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
             <p>Order qts</p>
             <button
               onClick={() =>
-                qtsOrder === 0 ? setQts(0) : setQts(qtsOrder - 1)
+                qtsOrder === 1 ? setQts(1) : setQts(qtsOrder - 1)
               }
             >
               <FaMinusSquare size={32} />
@@ -84,7 +114,13 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
               <FaPlusSquare size={32} />
             </button>
           </div>
-          <input type="submit" name="" id="" value="add to cart" />
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="add to cart"
+            onClick={handleSubmit}
+          />
         </div>
       </div>
     </>

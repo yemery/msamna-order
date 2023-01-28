@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../../Assets/Styles/Msemen.css";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { addOrder } from "../../Services/Reducers/Order";
+import { useNavigate } from "react-router-dom";
 
 const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
   const [counters, setCounters] = useState({
@@ -11,8 +14,26 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
     4: 0,
     5: 0,
   });
-  const [qtsOrder, setQts] = useState(0);
-  console.log(counters);
+  const [qtsOrder, setQts] = useState(1);
+  // console.log(counters);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const msamenOrder = { id: id, name: name, supps: counters, Qts: qtsOrder };
+    // console.log(msamenOrder);
+    dispatch(addOrder(msamenOrder));
+    setCounters({
+      0: 0,
+      1: 0,
+      2: 0,
+      3: 0,
+      4: 0,
+      5: 0,
+    });
+    setQts(1);
+    navigate("/");
+  };
   return (
     <>
       <div className="harchaContainer">
@@ -62,7 +83,7 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
             <p>Order qts</p>
             <button
               onClick={() =>
-                qtsOrder === 0 ? setCounters(0) : setQts(qtsOrder - 1)
+                qtsOrder === 1 ? setCounters(1) : setQts(qtsOrder - 1)
               }
             >
               <FaMinusSquare size={32} />
@@ -72,7 +93,13 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
               <FaPlusSquare size={32} />
             </button>
           </div>
-          <input type="submit" name="" id="" value="add to cart" />
+          <input
+            type="submit"
+            name=""
+            id=""
+            value="add to cart"
+            onClick={handleSubmit}
+          />
         </div>
       </div>
     </>

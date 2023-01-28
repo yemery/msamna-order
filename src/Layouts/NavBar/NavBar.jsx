@@ -2,7 +2,11 @@ import React from "react";
 import { BsFillCartFill } from "react-icons/bs";
 import "../../Assets/Styles/NavBar.css";
 import { Link } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+
 const NavBar = () => {
+  const cartLenght = useSelector((state) => state.Order.cartOrders);
+  // console.log(cartLenght.length);
   return (
     <>
       <nav className="navbar navbar-light bg-light">
@@ -14,7 +18,7 @@ const NavBar = () => {
         <div className="container-fluid shoppingCart">
           <Link to="/order">
             <BsFillCartFill size={20} />
-            <span>(0)</span>
+            <span>{cartLenght.length}</span>
           </Link>
         </div>
       </nav>

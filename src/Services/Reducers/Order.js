@@ -8,7 +8,9 @@ export const OrderSlice = createSlice({
   name: "order",
   initialState,
   reducers: {
-    addOrder: (state, userOrder) => {},
+    addOrder: (state, action) => {
+      state.cartOrders = [...state.cartOrders, action.payload];
+    },
     editOrder: (state) => {},
     deleteOrder: (state, action) => {},
   },
