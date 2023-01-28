@@ -5,7 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import { addOrder } from "../../Services/Reducers/Order";
 import { useNavigate } from "react-router-dom";
 
-const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
+const Harcha = ({
+  id,
+  name,
+  image,
+  price,
+  ingredient,
+  suppliments,
+  category,
+}) => {
   const [counters, setCounters] = useState({
     0: 0,
     1: 0,
@@ -27,6 +35,7 @@ const Harcha = ({ id, name, image, price, ingredient, suppliments }) => {
       supps: counters,
       Qts: qtsOrder,
       itemQts: itemQts,
+      cat: category,
     };
     console.log(harchaOrder);
     dispatch(addOrder(harchaOrder));

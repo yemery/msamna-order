@@ -5,7 +5,15 @@ import { useDispatch } from "react-redux";
 import { addOrder } from "../../Services/Reducers/Order";
 import { useNavigate } from "react-router-dom";
 
-const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
+const Msamen = ({
+  id,
+  name,
+  image,
+  price,
+  ingredient,
+  suppliments,
+  category,
+}) => {
   const [counters, setCounters] = useState({
     0: 0,
     1: 0,
@@ -20,8 +28,15 @@ const Msamen = ({ id, name, image, price, ingredient, suppliments }) => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    const msamenOrder = { id: id, name: name, supps: counters, Qts: qtsOrder };
-    // console.log(msamenOrder);
+    const msamenOrder = {
+      id: id,
+      name: name,
+      supps: counters,
+      Qts: qtsOrder,
+      cat: category,
+      price: price,
+    };
+    console.log(msamenOrder);
     dispatch(addOrder(msamenOrder));
     setCounters({
       0: 0,

@@ -5,7 +5,15 @@ import "../../Assets/Styles/Atay.css";
 import { FaMinusSquare, FaPlusSquare } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { addOrder } from "../../Services/Reducers/Order";
-const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
+const Atay = ({
+  id,
+  name,
+  image,
+  price,
+  ingredient,
+  suppliments,
+  category,
+}) => {
   const [orderQts, setOrderQtq] = useState(1);
   const [checkedItems, setCheckedItems] = useState([]);
   const navigate = useNavigate();
@@ -21,8 +29,10 @@ const Atay = ({ id, name, image, price, ingredient, suppliments }) => {
       name: name,
       supps: checkedItems,
       Qts: orderQts,
+      cat: category,
+      price: price,
     };
-    // console.log(atayOrder);
+    console.log(atayOrder);
     dispatch(addOrder(atayOrder));
     setOrderQtq(0);
     setCheckedItems([]);
