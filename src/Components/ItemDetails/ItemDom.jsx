@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../Assets/Styles/ItemDom.css";
 const ItemDom = ({ id, name, image, price, ingredient, suppliments }) => {
   //   console.log(findItemById);
 
   return (
     <>
+      <Link to="/" className="goHome" style={{ margin: "99px" }}>
+        back
+      </Link>
       <div className="container itemContainer">
         <div className="itemImg">
           <div></div>

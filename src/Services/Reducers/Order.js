@@ -41,15 +41,22 @@ export const OrderSlice = createSlice({
               e.price * e.itemQts) *
             e.Qts;
         }
-        // console.log(state.total);
-        return state.total;
       });
+    },
+    setLocalStorage: (state) => {
+      // const order=
+      state.orders = [...state.orders, state.cartOrders, state.total];
+      localStorage.setItem(
+        `${state.orders.length}`,
+        JSON.stringify(state.orders)
+      );
+      state.cartOrders = [];
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addOrder, editOrder, deleteOrder, orderTotal } =
+export const { addOrder, editOrder, deleteOrder, orderTotal, setLocalStorage } =
   OrderSlice.actions;
 
 export default OrderSlice.reducer;

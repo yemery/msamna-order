@@ -3,7 +3,11 @@ import "../../Assets/Styles/Order.css";
 import { useSelector, useDispatch } from "react-redux";
 import { CiTrash, CiEdit } from "react-icons/ci";
 import { Link } from "react-router-dom";
-import { orderTotal } from "../../Services/Reducers/Order";
+import {
+  deleteOrder,
+  orderTotal,
+  setLocalStorage,
+} from "../../Services/Reducers/Order";
 const Order = () => {
   const cartOrders = useSelector((state) => state.Order.cartOrders);
   const total = useSelector((state) => state.Order.total);
@@ -18,13 +22,20 @@ const Order = () => {
     dispatch(orderTotal());
   }, [cartOrders]);
   // console.log(total);
+  const handleDelete = (id) => {
+    dispatch(deleteOrder(id));
+  };
+  const handleLocalStorage = (e) => {
+    e.preventDefault();
+    dispatch(setLocalStorage());
+  };
 
   return (
     <>
+      <Link to="/" className="goHome" style={{ margin: "99px" }}>
+        back
+      </Link>
       <div className="orderContainer">
-        <Link to="/" className="goHome">
-          back
-        </Link>
         <h2>bill</h2>
         <div className="tableContainer">
           <table>
@@ -64,7 +75,7 @@ const Order = () => {
                                 {/* {setTotal(total + e.price * e.Qts)} */}
                               </td>
                               <td>
-                                <button>
+                                <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
                                 <button>
@@ -144,7 +155,7 @@ const Order = () => {
                                 dhs
                               </td>
                               <td>
-                                <button>
+                                <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
                                 <button>
@@ -224,7 +235,7 @@ const Order = () => {
                                 dhs
                               </td>
                               <td>
-                                <button>
+                                <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
                                 <button>
@@ -239,13 +250,22 @@ const Order = () => {
                   </>
                 );
               })}
-              <tr>
+              <tr style={{ display: cartOrders.length > 0 ? "" : "none" }}>
                 <th>Total</th>
                 <td></td>
                 <td></td>
                 <td></td>
 
                 <td style={{ fontWeight: "700" }}>{total} dhs</td>
+                <td>
+                  {" "}
+                  <input
+                    type="submit"
+                    value="print the bill"
+                    className="billPrint"
+                    onClick={handleLocalStorage}
+                  />
+                </td>
               </tr>
             </tbody>
           </table>
