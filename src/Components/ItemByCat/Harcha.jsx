@@ -36,6 +36,7 @@ const Harcha = ({
       Qts: qtsOrder,
       itemQts: itemQts,
       cat: category,
+      price: price,
     };
     console.log(harchaOrder);
     dispatch(addOrder(harchaOrder));
@@ -49,7 +50,7 @@ const Harcha = ({
     });
     setItemQts(1);
     setItemQts(1);
-    navigate("/");
+    navigate("/order");
   };
   return (
     <>

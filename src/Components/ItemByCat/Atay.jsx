@@ -36,7 +36,7 @@ const Atay = ({
     dispatch(addOrder(atayOrder));
     setOrderQtq(0);
     setCheckedItems([]);
-    navigate("/");
+    navigate("/order");
   };
 
   return (

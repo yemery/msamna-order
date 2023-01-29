@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   cartOrders: [],
   orders: [],
+  total: 0,
 };
 
 export const OrderSlice = createSlice({
@@ -11,12 +12,44 @@ export const OrderSlice = createSlice({
     addOrder: (state, action) => {
       state.cartOrders = [...state.cartOrders, action.payload];
     },
-    editOrder: (state) => {},
-    deleteOrder: (state, action) => {},
+    deleteOrder: (state, action) => {
+      const filterCartOrders = state.cartOrders.filter(
+        (e) => e.id != action.payload
+      );
+      state.cartOrders = filterCartOrders;
+    },
+    editOrder: (state, action) => {},
+    orderTotal: (state) => {
+      state.total = 0;
+      state.cartOrders.map((e) => {
+        if (e.cat == "msemen") {
+          state.total +=
+            (Object.entries(e.supps)
+              .filter(([key, value]) => value != 0)
+              .map(([key, value]) => value)
+              .reduce((acc, val) => acc + val, 0) +
+              e.price) *
+            e.Qts;
+        } else if (e.cat == "atay") {
+          state.total += e.price * e.Qts;
+        } else {
+          state.total +=
+            (Object.entries(e.supps)
+              .filter(([key, value]) => value != 0)
+              .map(([key, value]) => value)
+              .reduce((acc, val) => acc + val, 0) +
+              e.price * e.itemQts) *
+            e.Qts;
+        }
+        // console.log(state.total);
+        return state.total;
+      });
+    },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addOrder, editOrder, deleteOrder } = OrderSlice.actions;
+export const { addOrder, editOrder, deleteOrder, orderTotal } =
+  OrderSlice.actions;
 
 export default OrderSlice.reducer;

@@ -47,7 +47,7 @@ const Msamen = ({
       5: 0,
     });
     setQts(1);
-    navigate("/");
+    navigate("/order");
   };
   return (
     <>
