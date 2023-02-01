@@ -28,6 +28,7 @@ const Order = () => {
   };
   const handleLocalStorage = (e) => {
     e.preventDefault();
+    console.log(cartOrders);
     dispatch(setLocalStorage());
   };
 

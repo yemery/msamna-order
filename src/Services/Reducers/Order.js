@@ -67,7 +67,7 @@ export const OrderSlice = createSlice({
     },
     setLocalStorage: (state) => {
       // const order=
-      state.orders = [state.cartOrders, state.total];
+      state.orders = { order: state.cartOrders, total: state.total };
       localStorage.setItem(
         `${localStorage.length + 1}`,
         JSON.stringify(state.orders)
@@ -75,8 +75,9 @@ export const OrderSlice = createSlice({
       state.cartOrders = [];
     },
     getLocalStorage: (state) => {
-      Object.entries(localStorage).map((el) => {
-        state.getLocalStorage = [...state.getLocalStorage, [el]];
+      state.getLocalStorage = [];
+      Object.entries(localStorage).map(([key, value]) => {
+        state.getLocalStorage = [...state.getLocalStorage, JSON.parse(value)];
       });
     },
   },
