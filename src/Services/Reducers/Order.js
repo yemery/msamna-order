@@ -3,6 +3,7 @@ const initialState = {
   cartOrders: [],
   orders: [],
   total: 0,
+  getLocalStorage: [],
 };
 
 export const OrderSlice = createSlice({
@@ -18,7 +19,17 @@ export const OrderSlice = createSlice({
       );
       state.cartOrders = filterCartOrders;
     },
-    editOrder: (state, action) => {},
+    editOrder: (state, action) => {
+      if (action.payload.cat == "msemen") {
+        const findOldObject = state.cartOrders.find(
+          (e) => e.id == action.payload.id
+        );
+        if (findOldObject) {
+          findOldObject.Qts = action.payload.Qts;
+          findOldObject.supps = action.payload.supps;
+        }
+      }
+    },
     orderTotal: (state) => {
       state.total = 0;
       state.cartOrders.map((e) => {
@@ -45,18 +56,29 @@ export const OrderSlice = createSlice({
     },
     setLocalStorage: (state) => {
       // const order=
-      state.orders = [...state.orders, state.cartOrders, state.total];
+      state.orders = [state.cartOrders, state.total];
       localStorage.setItem(
-        `${state.orders.length}`,
+        `${localStorage.length + 1}`,
         JSON.stringify(state.orders)
       );
       state.cartOrders = [];
+    },
+    getLocalStorage: (state) => {
+      Object.entries(localStorage).map((el) => {
+        state.getLocalStorage = [...state.getLocalStorage, [el]];
+      });
     },
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { addOrder, editOrder, deleteOrder, orderTotal, setLocalStorage } =
-  OrderSlice.actions;
+export const {
+  addOrder,
+  editOrder,
+  deleteOrder,
+  orderTotal,
+  setLocalStorage,
+  getLocalStorage,
+} = OrderSlice.actions;
 
 export default OrderSlice.reducer;

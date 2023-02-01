@@ -10,6 +10,7 @@ import {
 } from "../../Services/Reducers/Order";
 const Order = () => {
   const cartOrders = useSelector((state) => state.Order.cartOrders);
+  console.log(cartOrders);
   const total = useSelector((state) => state.Order.total);
   const cats = useSelector((state) => state.Items.otherSupp);
   // console.log(cats);
@@ -78,9 +79,9 @@ const Order = () => {
                                 <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
-                                <button>
+                                <Link to={`/editOrder/${e.id}`}>
                                   <CiEdit size={25} />
-                                </button>
+                                </Link>
                               </td>
                             </tr>
                           </>
@@ -158,9 +159,9 @@ const Order = () => {
                                 <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
-                                <button>
+                                <Link to={`/editOrder/${e.id}`}>
                                   <CiEdit size={25} />
-                                </button>
+                                </Link>
                               </td>{" "}
                             </tr>
                           </>
@@ -238,9 +239,9 @@ const Order = () => {
                                 <button onClick={() => handleDelete(e.id)}>
                                   <CiTrash size={25} />
                                 </button>
-                                <button>
+                                <Link to={`/editOrder/${e.id}`}>
                                   <CiEdit size={25} />
-                                </button>
+                                </Link>
                               </td>{" "}
                             </tr>
                           </>
