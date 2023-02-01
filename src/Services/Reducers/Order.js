@@ -4,6 +4,7 @@ const initialState = {
   orders: [],
   total: 0,
   getLocalStorage: [],
+  totalOfAllOrders: 0,
 };
 
 export const OrderSlice = createSlice({
@@ -80,6 +81,10 @@ export const OrderSlice = createSlice({
         state.getLocalStorage = [...state.getLocalStorage, JSON.parse(value)];
       });
     },
+    sumAllOrder: (state) => {
+      state.totalOfAllOrders = 0;
+      state.getLocalStorage.map((e) => (state.totalOfAllOrders += e.total));
+    },
   },
 });
 
@@ -91,6 +96,7 @@ export const {
   orderTotal,
   setLocalStorage,
   getLocalStorage,
+  sumAllOrder,
 } = OrderSlice.actions;
 
 export default OrderSlice.reducer;

@@ -1,0 +1,15 @@
+.tableContainer table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tableContainer table th,
+.tableContainer table tr td {
+  padding: 8px;
+  text-align: left;
+  height: fit-content;
+  /* border-bottom: 1px solid #ddd; */
+}
+.tableContainer {
+  margin: 99px;
+}
