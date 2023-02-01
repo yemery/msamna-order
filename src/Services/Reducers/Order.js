@@ -20,13 +20,24 @@ export const OrderSlice = createSlice({
       state.cartOrders = filterCartOrders;
     },
     editOrder: (state, action) => {
+      const findOldObject = state.cartOrders.find(
+        (e) => e.id == action.payload.id
+      );
       if (action.payload.cat == "msemen") {
-        const findOldObject = state.cartOrders.find(
-          (e) => e.id == action.payload.id
-        );
         if (findOldObject) {
           findOldObject.Qts = action.payload.Qts;
           findOldObject.supps = action.payload.supps;
+        }
+      } else if (action.payload.cat == "7archa") {
+        if (findOldObject) {
+          findOldObject.Qts = action.payload.Qts;
+          findOldObject.itemQts = action.payload.itemQts;
+          findOldObject.supps = action.payload.supps;
+        }
+      } else {
+        if (findOldObject) {
+          findOldObject.supps = action.payload.supps;
+          findOldObject.Qts = action.payload.Qts;
         }
       }
     },
