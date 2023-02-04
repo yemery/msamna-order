@@ -3,6 +3,7 @@ The project is a website developed using React JS and Redux Toolkit. The main ob
 
 
 <a href="https://msamna.devcef.com" target="_blank">msamna-order-sys</a>
-<span style="color:blue">*incomplete* </span>.
+<br/>
+incomplete
 
 
