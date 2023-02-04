@@ -3,5 +3,6 @@ The project is a website developed using React JS and Redux Toolkit. The main ob
 
 
 <a href="https://msamna.devcef.com" target="_blank">msamna-order-sys</a>
-![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `incomplete`
+<span style="color:blue">*incomplete* </span>.
+
 
